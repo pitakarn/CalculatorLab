@@ -19,6 +19,8 @@ namespace CPE200Lab1
         private bool isfirstOperater;
         private string firstOperand;
         private string operate;
+        private double memory;
+
         private CalculatorEngine engine;
 
         private void resetAll()
@@ -99,7 +101,7 @@ namespace CPE200Lab1
             {
                 case "+":
                 case "-":
-                case "X":
+                case "X":            
                 case "÷":
                     firstOperand = lblDisplay.Text;
                     isAfterOperater = true;
@@ -107,6 +109,7 @@ namespace CPE200Lab1
                 case "%":
                     // your code here
                     break;
+
             }
             isAllowBack = false;
             isfirstOperater = false;
@@ -209,6 +212,60 @@ namespace CPE200Lab1
                     lblDisplay.Text = "0";
                 }
             }
+        }
+
+        private void lblDisplay_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mMinus_Click(object sender, EventArgs e)
+        {
+            if (lblDisplay.Text is "Error")
+            {
+                return;
+            }
+            memory -= Convert.ToDouble(lblDisplay.Text);
+            isAfterOperater = true;
+        }
+
+        private void mPlus_Click(object sender, EventArgs e)
+        {
+            if (lblDisplay.Text is "Error")
+            {
+                return;
+            }
+            memory += Convert.ToDouble(lblDisplay.Text);
+            isAfterOperater = true;
+        }
+
+        private void MC_Click(object sender, EventArgs e)
+        {
+            memory = 0;
+        }
+
+        private void MR_Click(object sender, EventArgs e)
+        {
+            if (lblDisplay.Text is "error")
+            {
+                return;
+            }
+            lblDisplay.Text = memory.ToString();
+        }
+
+        private void MS_Click(object sender, EventArgs e)
+        {
+            if (lblDisplay.Text is "Error")
+            {
+                return;
+            }
+            memory = Convert.ToDouble(lblDisplay.Text);
+            isAfterOperater = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
