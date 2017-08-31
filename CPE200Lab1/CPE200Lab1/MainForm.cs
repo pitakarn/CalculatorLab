@@ -225,7 +225,6 @@ namespace CPE200Lab1
                 return;
             }
             lblDisplay.Text = memory.ToString();
-
         }
 
         private void MS_Click(object sender, EventArgs e)
@@ -236,7 +235,6 @@ namespace CPE200Lab1
             }
             memory = Convert.ToDouble(lblDisplay.Text);
             isAfterOperater = true;
-
         }
 
         private void mPlus_Click(object sender, EventArgs e)
@@ -247,7 +245,6 @@ namespace CPE200Lab1
             }
             memory += Convert.ToDouble(lblDisplay.Text);
             isAfterOperater = true;
-
         }
 
         private void mMinus_Click(object sender, EventArgs e)
@@ -258,7 +255,6 @@ namespace CPE200Lab1
             }
             memory -= Convert.ToDouble(lblDisplay.Text);
             isAfterOperater = true;
-
         }
     }
 }
