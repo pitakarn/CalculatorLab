@@ -49,6 +49,13 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnBack = new System.Windows.Forms.Button();
             this.lblDisplay = new System.Windows.Forms.Label();
+            this.MC = new System.Windows.Forms.Button();
+            this.MR = new System.Windows.Forms.Button();
+            this.MS = new System.Windows.Forms.Button();
+            this.mPlus = new System.Windows.Forms.Button();
+            this.mMinus = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn7
@@ -284,11 +291,86 @@
             this.lblDisplay.Text = "0";
             this.lblDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // Form1
+            // MC
+            // 
+            this.MC.Location = new System.Drawing.Point(388, 148);
+            this.MC.Name = "MC";
+            this.MC.Size = new System.Drawing.Size(88, 64);
+            this.MC.TabIndex = 21;
+            this.MC.Text = "MC";
+            this.MC.UseVisualStyleBackColor = true;
+            this.MC.Click += new System.EventHandler(this.MC_Click);
+            // 
+            // MR
+            // 
+            this.MR.Location = new System.Drawing.Point(388, 218);
+            this.MR.Name = "MR";
+            this.MR.Size = new System.Drawing.Size(88, 64);
+            this.MR.TabIndex = 22;
+            this.MR.Text = "MR";
+            this.MR.UseVisualStyleBackColor = true;
+            this.MR.Click += new System.EventHandler(this.MR_Click);
+            // 
+            // MS
+            // 
+            this.MS.Location = new System.Drawing.Point(388, 288);
+            this.MS.Name = "MS";
+            this.MS.Size = new System.Drawing.Size(88, 64);
+            this.MS.TabIndex = 23;
+            this.MS.Text = "MS";
+            this.MS.UseVisualStyleBackColor = true;
+            this.MS.Click += new System.EventHandler(this.MS_Click);
+            // 
+            // mPlus
+            // 
+            this.mPlus.Location = new System.Drawing.Point(388, 361);
+            this.mPlus.Name = "mPlus";
+            this.mPlus.Size = new System.Drawing.Size(88, 64);
+            this.mPlus.TabIndex = 24;
+            this.mPlus.Text = "M+";
+            this.mPlus.UseVisualStyleBackColor = true;
+            this.mPlus.Click += new System.EventHandler(this.mPlus_Click);
+            // 
+            // mMinus
+            // 
+            this.mMinus.Location = new System.Drawing.Point(388, 428);
+            this.mMinus.Name = "mMinus";
+            this.mMinus.Size = new System.Drawing.Size(88, 64);
+            this.mMinus.TabIndex = 25;
+            this.mMinus.Text = "M-";
+            this.mMinus.UseVisualStyleBackColor = true;
+            this.mMinus.Click += new System.EventHandler(this.mMinus_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(482, 151);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(88, 64);
+            this.button6.TabIndex = 26;
+            this.button6.Text = "button6";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(482, 218);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(88, 64);
+            this.button7.TabIndex = 27;
+            this.button7.Text = "button7";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(394, 508);
+            this.ClientSize = new System.Drawing.Size(575, 508);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.mMinus);
+            this.Controls.Add(this.mPlus);
+            this.Controls.Add(this.MS);
+            this.Controls.Add(this.MR);
+            this.Controls.Add(this.MC);
             this.Controls.Add(this.lblDisplay);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnClear);
@@ -310,7 +392,7 @@
             this.Controls.Add(this.btn9);
             this.Controls.Add(this.btn8);
             this.Controls.Add(this.btn7);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -340,6 +422,13 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblDisplay;
+        private System.Windows.Forms.Button MC;
+        private System.Windows.Forms.Button MR;
+        private System.Windows.Forms.Button MS;
+        private System.Windows.Forms.Button mPlus;
+        private System.Windows.Forms.Button mMinus;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
     }
 }
 
