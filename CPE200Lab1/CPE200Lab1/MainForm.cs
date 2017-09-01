@@ -130,7 +130,7 @@ namespace CPE200Lab1
                     // your code here
                     break;
             }
-            isAllowBack = false;
+            isAllowBack = false;            
         }
 
         private void btnEqual_Click(object sender, EventArgs e)
@@ -149,8 +149,8 @@ namespace CPE200Lab1
             {
                 lblDisplay.Text = result;
             }
-            isAfterEqual = true;
-         }
+            isAfterEqual = true;            
+        }
 
         private void btnDot_Click(object sender, EventArgs e)
         {
