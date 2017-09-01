@@ -18,8 +18,10 @@ namespace CPE200Lab1
         private bool isAfterEqual;
         private bool isfirstOperater;
         private string firstOperand;
+        private string secondOperand;
         private string operate;
         private CalculatorEngine engine;
+        
         private double memory;
 
 
@@ -30,7 +32,7 @@ namespace CPE200Lab1
             containsDot = false;
             isAfterOperater = false;
             isAfterEqual = false;
-            isfirstOperater = true;
+            isfirstOperater = false;
         }
              
         public MainForm()
@@ -79,13 +81,13 @@ namespace CPE200Lab1
                 return;
             }
             operate = ((Button)sender).Text;
-            if (!isfirstOperater)
+            if (isfirstOperater)
             {
                 if (lblDisplay.Text is "Error")
                 {
                     return;
                 }
-                string secondOperand = lblDisplay.Text;
+                secondOperand = lblDisplay.Text;
                 string result = engine.calculate(operate, firstOperand, secondOperand);
                 if (result is "E" || result.Length > 8)
                 {
@@ -97,7 +99,9 @@ namespace CPE200Lab1
                 }
                 
             }
-                switch (operate)
+            string temp = operate;
+            operate = ((Button)sender).Text;
+            switch (operate)
             {
                 case "+":
                 case "-":
@@ -106,12 +110,14 @@ namespace CPE200Lab1
                     firstOperand = lblDisplay.Text;
                     isAfterOperater = true;
                     break;
-                case "%":
-                    // your code here
-                    break;
+                
+
+                                  
             }
             isAllowBack = false;
-            isfirstOperater = false;
+            isfirstOperater = true;
+            containsDot = false;
+
         }
 
         private void btnEqual_Click(object sender, EventArgs e)
@@ -130,7 +136,7 @@ namespace CPE200Lab1
             {
                 lblDisplay.Text = result;
             }
-            isAfterEqual = true;
+            isfirstOperater = false;
         }
 
         private void btnDot_Click(object sender, EventArgs e)
@@ -254,6 +260,59 @@ namespace CPE200Lab1
                 return;
             }
             memory -= Convert.ToDouble(lblDisplay.Text);
+            isAfterOperater = true;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            double result2;
+            string[] parts2;
+            int remainLength1 = 8;
+            firstOperand = lblDisplay.Text;
+            result2 = (1/Convert.ToDouble(firstOperand));
+            parts2 = lblDisplay.Text.Split('.');
+            if (parts2[0].Length > 8)
+            {
+                lblDisplay.Text = "Errorr";
+            }
+            
+            remainLength1 = 8 - parts2[0].Length - 1;
+            lblDisplay.Text = result2.ToString("N" + remainLength1);
+            isAfterOperater = true;
+        }
+        private void button7_Click(object sender, EventArgs e)
+        {
+            double result2;
+            string[] parts2;
+            int remainLength1 = 8;
+            firstOperand = lblDisplay.Text;
+            result2 = (Math.Pow(Convert.ToDouble(firstOperand), 0.5));
+            parts2 = lblDisplay.Text.Split('.');
+            if (parts2[0].Length > 8)
+            {
+                lblDisplay.Text = "Errorr";
+            }
+
+            remainLength1 = 8 - parts2[0].Length - 1;
+            lblDisplay.Text = result2.ToString("N" + remainLength1);
+            isAfterOperater = true;
+        }
+
+        private void btnPercent_Click(object sender, EventArgs e)
+        {
+            double result2;
+            string[] parts2;
+            int remainLength1 = 8;
+            
+            result2 = (Convert.ToDouble(firstOperand) * Convert.ToDouble(lblDisplay.Text) / 100);
+            parts2 = lblDisplay.Text.Split('.');
+            if (parts2[0].Length > 8)
+            {
+                lblDisplay.Text = "Errorr";
+            }
+
+            remainLength1 = 8 - parts2[0].Length - 1;
+            lblDisplay.Text = result2.ToString("N" + remainLength1);
             isAfterOperater = true;
         }
     }

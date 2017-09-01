@@ -254,7 +254,7 @@
             this.btnPercent.TabIndex = 17;
             this.btnPercent.Text = "%";
             this.btnPercent.UseVisualStyleBackColor = true;
-            this.btnPercent.Click += new System.EventHandler(this.btnOperator_Click);
+            this.btnPercent.Click += new System.EventHandler(this.btnPercent_Click);
             // 
             // btnClear
             // 
@@ -283,7 +283,7 @@
             this.lblDisplay.AutoSize = true;
             this.lblDisplay.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 54F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDisplay.Location = new System.Drawing.Point(12, 54);
+            this.lblDisplay.Location = new System.Drawing.Point(102, 45);
             this.lblDisplay.MinimumSize = new System.Drawing.Size(365, 0);
             this.lblDisplay.Name = "lblDisplay";
             this.lblDisplay.Size = new System.Drawing.Size(365, 82);
@@ -347,8 +347,9 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(88, 64);
             this.button6.TabIndex = 26;
-            this.button6.Text = "1/x";
+            this.button6.Text = "1/X";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -356,8 +357,9 @@
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(88, 64);
             this.button7.TabIndex = 27;
-            this.button7.Text = "button7";
+            this.button7.Text = "√";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // MainForm
             // 
