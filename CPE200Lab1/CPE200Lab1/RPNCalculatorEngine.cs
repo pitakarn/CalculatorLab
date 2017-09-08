@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace CPE200Lab1
 {
-    class RPNCalculatorEngine 
+    class RPNCalculatorEngine : CalculatorEngine
     {
-
+        public string Process(string str)
+        {
+            List<string> part = str.Split(' ').ToList<string>();
+            return null;
+        }
     }
 }
